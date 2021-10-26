@@ -15,11 +15,20 @@ public class ObjectTeleporter : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("tp");
-        if (collision.gameObject.tag == "Player")
+        float pos_x = collision.gameObject.transform.position.x;
+        float pos_y = collision.gameObject.transform.position.y;
+        float pos_z = collision.gameObject.transform.position.z;
+
+        switch (gameObject.tag)
         {
-            Debug.Log("tp");
-            collision.gameObject.transform.position = new Vector3(0, 0, 0);
+            case "border_x":
+                collision.transform.position = new Vector3(pos_x, -pos_y, pos_z);
+                break;
+            case "border_y":
+                collision.transform.position = new Vector3(-pos_x, pos_y, pos_z);
+                break;
         }
     }
+
+
 }
