@@ -10,20 +10,16 @@ public class StatusChecker : MonoBehaviour
     public Text scoreText;
     public GameObject explosion;
 
-    int health;
-    int score;
-
     private void Start()
     {
-        health = 3;
-        score = 0;
-        PlayerPrefs.SetInt("score", score);
+        PlayerPrefs.SetInt("health", 3);
+        PlayerPrefs.SetInt("score", 0);
         soundHit = GetComponent<AudioSource>();
     }
 
     void FixedUpdate()
     {
-        healthText.text = $"health count: {health}";
+        healthText.text = $"health count: {PlayerPrefs.GetInt("health")}";
         scoreText.text = $"score: {PlayerPrefs.GetInt("score")}";
     }
 
@@ -31,16 +27,20 @@ public class StatusChecker : MonoBehaviour
     {
         if (collision.gameObject.tag == "meteor")
         {
+            int health = PlayerPrefs.GetInt("health") - 1;
+            PlayerPrefs.SetInt("health", health);
+
             Destroy(collision.gameObject);
-            if (health > 0)
+
+            if (health == 0)
             {
-                soundHit.Play();
-                health--;
+                Instantiate(explosion, gameObject.transform.position, gameObject.transform.rotation);
+                FixedUpdate();
+                Destroy(gameObject);                
             }
             else
-            {                
-                Instantiate(explosion, gameObject.transform.position, gameObject.transform.rotation);
-                Destroy(gameObject);
+            {
+                soundHit.Play();
             }
         }
 
