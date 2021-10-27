@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class StatusChecker : MonoBehaviour
 {
+    AudioSource soundHit;
     public Text healthText;
     public Text scoreText;
     public GameObject explosion;
@@ -14,6 +15,7 @@ public class StatusChecker : MonoBehaviour
 
     private void Start()
     {
+        soundHit = GetComponent<AudioSource>();
         health = 3;
         score = 0;
     }
@@ -31,10 +33,11 @@ public class StatusChecker : MonoBehaviour
             Destroy(collision.gameObject);
             if (health > 0)
             {
+                soundHit.Play();
                 health--;
             }
             else
-            {
+            {                
                 Instantiate(explosion, gameObject.transform.position, gameObject.transform.rotation);
                 Destroy(gameObject);
             }

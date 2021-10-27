@@ -5,22 +5,19 @@ using UnityEngine;
 public class ObjectInteraction : MonoBehaviour
 {
     AudioSource sound;
+
     private void Start()
     {
-        sound = gameObject.GetComponent<AudioSource>();    
+        sound = GetComponent<AudioSource>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "meteor")
+        sound.Play();
+        if (collision.gameObject.tag == "projectile")
         {
-            sound.Play();
-
-            if (gameObject.tag == "projectile")
-            {
-                Destroy(collision.gameObject);
-                Destroy(gameObject);
-            }
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
         }
     }
 }
