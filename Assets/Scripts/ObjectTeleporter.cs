@@ -14,9 +14,25 @@ public class ObjectTeleporter : MonoBehaviour
             switch (gameObject.tag)
             {
                 case "border_x":
+                    if (pos_y > 0)
+                    {
+                        pos_y--;
+                    }
+                    else
+                    {
+                        pos_y++;
+                    }
                     collision.transform.position = new Vector3(pos_x, -pos_y, 0);
                     break;
                 case "border_y":
+                    if (pos_x > 0)
+                    {
+                        pos_x--;
+                    }
+                    else
+                    {
+                        pos_x++;
+                    }
                     collision.transform.position = new Vector3(-pos_x, pos_y, 0);
                     break;
             }

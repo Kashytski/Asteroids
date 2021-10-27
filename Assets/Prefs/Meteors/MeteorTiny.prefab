@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2083842508147143924}
   - component: {fileID: 433012344061321909}
   m_Layer: 0
-  m_Name: Meteor
+  m_Name: MeteorTiny
   m_TagString: meteor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,12 +76,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 47743ec1b1eb8c041b3412d8d205efc2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b193701daa0ecfb41a308763604f7e72, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.01, y: 0.84}
+  m_Size: {x: 0.18, y: 0.18}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -102,7 +102,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.09
 --- !u!50 &7107098998070066906
 Rigidbody2D:
   serializedVersion: 4
@@ -137,14 +137,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 21300000, guid: 47743ec1b1eb8c041b3412d8d205efc2, type: 3}
-  - {fileID: 21300000, guid: ccb150f802b876a4a80c5fed5760fbb9, type: 3}
-  - {fileID: 21300000, guid: 77a92ea66d1368c4eaa995dd5c93dbae, type: 3}
-  - {fileID: 21300000, guid: 4918e189386cabf4291a7500a1d2dcab, type: 3}
-  - {fileID: 21300000, guid: ef7b636cdb3d5cb4f8ba9f2d0505c446, type: 3}
-  - {fileID: 21300000, guid: cb2cce05cd00c724a8d25fcc8cdbb637, type: 3}
-  - {fileID: 21300000, guid: eaeb6fc84c45acc4b8f2e734d361abbf, type: 3}
-  - {fileID: 21300000, guid: fda32a062a524054ca2a0159d3ce7317, type: 3}
+  - {fileID: 21300000, guid: 9c25d1610b062cb4c81eb98904c15a3b, type: 3}
+  - {fileID: 21300000, guid: b35d957f7b07e4245a22bfa64e315782, type: 3}
+  - {fileID: 21300000, guid: f4c3bc238b8cdec43967f2918066d859, type: 3}
+  - {fileID: 21300000, guid: b193701daa0ecfb41a308763604f7e72, type: 3}
 --- !u!114 &2083842508147143924
 MonoBehaviour:
   m_ObjectHideFlags: 0
