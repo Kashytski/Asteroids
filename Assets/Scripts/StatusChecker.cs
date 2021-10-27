@@ -10,20 +10,21 @@ public class StatusChecker : MonoBehaviour
     public Text scoreText;
     public GameObject explosion;
 
-    int health { get; set; }
-    int score { get; set; }
+    int health;
+    int score;
 
     private void Start()
     {
-        soundHit = GetComponent<AudioSource>();
         health = 3;
         score = 0;
+        PlayerPrefs.SetInt("score", score);
+        soundHit = GetComponent<AudioSource>();
     }
 
     void FixedUpdate()
     {
         healthText.text = $"health count: {health}";
-        scoreText.text = $"score: {score}";
+        scoreText.text = $"score: {PlayerPrefs.GetInt("score")}";
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

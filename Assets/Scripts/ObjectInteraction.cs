@@ -16,6 +16,9 @@ public class ObjectInteraction : MonoBehaviour
         sound.Play();
         if (collision.gameObject.tag == "projectile")
         {
+            int score = PlayerPrefs.GetInt("score") + 10;
+            PlayerPrefs.SetInt("score",score);
+
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }

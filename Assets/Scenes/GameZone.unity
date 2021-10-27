@@ -505,7 +505,7 @@ MonoBehaviour:
   - {fileID: 7712712473532122398, guid: 730057a71db9f2842ac939ff3d619882, type: 3}
   - {fileID: 9007448473474782120, guid: 03482292ff6c17e4180b70e77e8b6f91, type: 3}
   - {fileID: 8267656239785086056, guid: 618166c2e1539cc4889d4307b6d0e9b3, type: 3}
-  timeDelay: 1
+  timeDelay: 2
 --- !u!1 &539191891
 GameObject:
   m_ObjectHideFlags: 0
