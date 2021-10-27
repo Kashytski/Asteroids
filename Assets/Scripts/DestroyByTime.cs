@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class DestroyByTime : MonoBehaviour
 {
+    public int timeDestroy = 1;
     void Start()
     {
-        Invoke("Destroy",1f);
+        Invoke("Destroy", timeDestroy);
     }
 
     private void Destroy()

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4753401114350543271}
   - component: {fileID: 4753401114350543269}
   m_Layer: 0
-  m_Name: DestroySound
+  m_Name: SoundCollision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42,7 +42,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c112e7492041f26409a33e4764304c0b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f2ff6fb20151a9246be60ccba34a925b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

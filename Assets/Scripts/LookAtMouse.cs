@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class LookAtMouse : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
 
     void Update()
     {

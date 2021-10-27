@@ -14,7 +14,6 @@ public class MeteorRender : MonoBehaviour
         spriteNum = Random.RandomRange(0, sprites.Length);
     }
 
-    // Update is called once per frame
     void Update()
     {
         spriteRender.sprite = sprites[spriteNum];
