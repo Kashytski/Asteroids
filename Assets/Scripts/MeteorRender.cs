@@ -12,10 +12,6 @@ public class MeteorRender : MonoBehaviour
     {
         spriteRender = GetComponent<SpriteRenderer>();
         spriteNum = Random.RandomRange(0, sprites.Length);
-    }
-
-    void Update()
-    {
         spriteRender.sprite = sprites[spriteNum];
     }
 }
