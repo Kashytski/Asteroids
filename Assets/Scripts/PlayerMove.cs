@@ -4,14 +4,9 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    public float playerSpeed = 10f;
-    public float horizontal;
-    public float vertical;
-
-    private void Start()
-    {
-
-    }
+    private float playerSpeed = 10f;
+    private float horizontal;
+    private float vertical;
 
     void Update()
     {

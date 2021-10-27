@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class ObjectDestroyer : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        if (collision.gameObject.tag == "meteor")
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
     }
-
 }
