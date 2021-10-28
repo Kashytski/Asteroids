@@ -30,12 +30,12 @@ public class MeteorSpawner : MonoBehaviour
         if (spawn_xy == 0)
         {
             int spawn_x = Random.RandomRange(-11, 11);
-            posSpawn = new Vector3(spawn_x,5,0);
+            posSpawn = new Vector3(spawn_x,7.5f,0);
         }
         else
         {
             int spawn_y = Random.RandomRange(-7,7);
-            posSpawn = new Vector3(9,spawn_y,0);
+            posSpawn = new Vector3(11.5f,spawn_y,0);
         }
 
         meteorType = Random.RandomRange(0, meteors.Length);

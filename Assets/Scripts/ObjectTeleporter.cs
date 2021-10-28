@@ -27,11 +27,11 @@ public class ObjectTeleporter : MonoBehaviour
                 case "border_y":
                     if (pos_x > 0)
                     {
-                        pos_x--;
+                        pos_x -= 0.5f;
                     }
                     else
                     {
-                        pos_x++;
+                        pos_x += 0.5f;
                     }
                     collision.transform.position = new Vector3(-pos_x, pos_y, 0);
                     break;
