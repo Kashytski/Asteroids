@@ -354,7 +354,7 @@ GameObject:
   - component: {fileID: 466801332}
   - component: {fileID: 466801331}
   m_Layer: 5
-  m_Name: Life
+  m_Name: Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -412,7 +412,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Life: {life}
+  m_Text: 'score: {score}
 
 '
 --- !u!222 &466801332
@@ -887,7 +887,7 @@ GameObject:
   - component: {fileID: 1172640334}
   - component: {fileID: 1172640333}
   m_Layer: 5
-  m_Name: Score
+  m_Name: Life
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -945,7 +945,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'score: {score}'
+  m_Text: 'Life: {life}'
 --- !u!222 &1172640334
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1352,6 +1352,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b82338f81d27c6f4e890edfaaacfb2cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeText: {fileID: 466801331}
-  scoreText: {fileID: 1172640333}
+  lifeText: {fileID: 1172640333}
+  scoreText: {fileID: 466801331}
   explosion: {fileID: 4594012550874565694, guid: a537f41d69a17604a89d169ddeec78f2, type: 3}

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public GameObject projectile;
-    public Transform shootPoint;
+    [SerializeField] GameObject projectile;
+    [SerializeField] Transform shootPoint;
 
     private float playerSpeed = 10f;
     private float horizontal;

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class MeteorSpawner : MonoBehaviour
 {
-    public GameObject[] meteors;
+    [SerializeField] GameObject[] meteors;
     private int meteorType;
 
-    public float timeDelay = 4.0f;
+    private float timeDelay = 1.0f;
     private float timeStamp;
 
     Vector3 posSpawn;

@@ -4,10 +4,10 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class RestartManager : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-    public GameObject restartText;
-    public GameObject meteorSpawner;
+    [SerializeField] GameObject restartText;
+    [SerializeField] GameObject meteorSpawner;
 
     void Update()
     {
@@ -21,6 +21,11 @@ public class RestartManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F5) && restartText.activeInHierarchy == true)
         {
             SceneManager.LoadScene("GameZone");
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
         }
     }
 }

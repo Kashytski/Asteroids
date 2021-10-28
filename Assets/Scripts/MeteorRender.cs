@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MeteorRender : MonoBehaviour
 {
-    public Sprite[] sprites;
+    [SerializeField] Sprite[] sprites;
     SpriteRenderer spriteRender;
     private int spriteNum;
 

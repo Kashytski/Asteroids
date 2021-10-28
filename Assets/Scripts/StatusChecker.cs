@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class StatusChecker : MonoBehaviour
 {
     AudioSource soundHit;
-    public Text lifeText;
-    public Text scoreText;
-    public GameObject explosion;
+    [SerializeField] Text lifeText;
+    [SerializeField] Text scoreText;
+    [SerializeField] GameObject explosion;
 
     private void Start()
     {
