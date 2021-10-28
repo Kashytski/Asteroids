@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject projectile;
     [SerializeField] Transform shootPoint;
 
-    private float playerSpeed = 10f;
+    private float playerSpeed = 5f;
     private float horizontal;
     private float vertical;
 
@@ -16,9 +16,9 @@ public class PlayerController : MonoBehaviour
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
 
-        gameObject.transform.Translate(Vector3.right * Time.deltaTime * playerSpeed * horizontal);
-        gameObject.transform.Translate(Vector3.up * Time.deltaTime * playerSpeed * vertical);
-        
+        gameObject.transform.position += Vector3.right * Time.deltaTime * playerSpeed * horizontal;
+        gameObject.transform.position += Vector3.up * Time.deltaTime * playerSpeed * vertical;
+
         //Look at mouse
         var direction = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
         var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
