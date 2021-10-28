@@ -11,8 +11,8 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        int life = PlayerPrefs.GetInt("life");
-        if (life == 0)
+        int lives = PlayerPrefs.GetInt("lives");
+        if (lives == 0)
         {
             restartText.SetActive(true);
             meteorSpawner.SetActive(false);

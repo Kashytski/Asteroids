@@ -7,7 +7,7 @@ public class MeteorSpawner : MonoBehaviour
     [SerializeField] GameObject[] meteors;
     private int meteorType;
 
-    private float timeDelay = 1.0f;
+    private float timeDelay = 1.5f;
     private float timeStamp;
 
     Vector3 posSpawn;
@@ -23,8 +23,8 @@ public class MeteorSpawner : MonoBehaviour
 
     void Spawn()
     {
-        int force_x = Random.RandomRange(-5,5);
-        int force_y = Random.RandomRange(-5,5);
+        int force_x = Random.RandomRange(-10,10);
+        int force_y = Random.RandomRange(-10, 10);
         int spawn_xy = Random.RandomRange(0,1);  
 
         if (spawn_xy == 0)
