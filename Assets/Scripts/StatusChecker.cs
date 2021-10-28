@@ -6,20 +6,20 @@ using UnityEngine.UI;
 public class StatusChecker : MonoBehaviour
 {
     AudioSource soundHit;
-    public Text healthText;
+    public Text lifeText;
     public Text scoreText;
     public GameObject explosion;
 
     private void Start()
     {
-        PlayerPrefs.SetInt("health", 3);
+        PlayerPrefs.SetInt("life", 3);
         PlayerPrefs.SetInt("score", 0);
         soundHit = GetComponent<AudioSource>();
     }
 
     void FixedUpdate()
     {
-        healthText.text = $"health count: {PlayerPrefs.GetInt("health")}";
+        lifeText.text = $"Life: {PlayerPrefs.GetInt("life")}";
         scoreText.text = $"score: {PlayerPrefs.GetInt("score")}";
     }
 
@@ -27,12 +27,12 @@ public class StatusChecker : MonoBehaviour
     {
         if (collision.gameObject.tag == "meteor")
         {
-            int health = PlayerPrefs.GetInt("health") - 1;
-            PlayerPrefs.SetInt("health", health);
+            int life = PlayerPrefs.GetInt("life") - 1;
+            PlayerPrefs.SetInt("life", life);
 
             Destroy(collision.gameObject);
 
-            if (health == 0)
+            if (life == 0)
             {
                 Instantiate(explosion, gameObject.transform.position, gameObject.transform.rotation);
                 FixedUpdate();

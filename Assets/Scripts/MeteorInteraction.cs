@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectInteraction : MonoBehaviour
+public class MeteorInteraction : MonoBehaviour
 {
     AudioSource sound;
 
@@ -14,6 +14,7 @@ public class ObjectInteraction : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         sound.Play();
+
         if (collision.gameObject.tag == "projectile")
         {
             int score = PlayerPrefs.GetInt("score") + 10;

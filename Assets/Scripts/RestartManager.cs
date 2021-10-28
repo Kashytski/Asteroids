@@ -6,20 +6,19 @@ using UnityEngine.UI;
 
 public class RestartManager : MonoBehaviour
 {
-    public GameObject restart;
-    public GameObject spawner;
-    public Text healthText;
+    public GameObject restartText;
+    public GameObject meteorSpawner;
 
     void Update()
     {
-        int health = PlayerPrefs.GetInt("health");
-        if (health == 0)
+        int life = PlayerPrefs.GetInt("life");
+        if (life == 0)
         {
-            restart.SetActive(true);
-            spawner.SetActive(false);
+            restartText.SetActive(true);
+            meteorSpawner.SetActive(false);
         }           
 
-        if (Input.GetKeyDown(KeyCode.F5) && restart.activeInHierarchy == true)
+        if (Input.GetKeyDown(KeyCode.F5) && restartText.activeInHierarchy == true)
         {
             SceneManager.LoadScene("GameZone");
         }
